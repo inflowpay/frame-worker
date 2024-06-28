@@ -3,7 +3,6 @@ import { fetcher } from "../lib/fetcher";
 
 // const API_URL = "http://localhost:3000";
 const API_URL = "https://api.frame.inflowpay.xyz";
-// const API_URL = "https://frame-api-cg63.onrender.com";
 
 export function createPayment(wallet: string, value: number) {
   return fetcher(
@@ -16,8 +15,8 @@ export function createPayment(wallet: string, value: number) {
       method: "POST",
       body: JSON.stringify({
         walletAddress: wallet,
-        successUrl: `${API_URL}/success`,
-        cancelUrl: `${API_URL}/cancel`,
+        successUrl: "https://inflowpay.xyz",
+        cancelUrl: "https://inflowpay.xyz",
         products: [
           {
             name: value.toString(),
